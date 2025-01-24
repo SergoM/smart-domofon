@@ -240,7 +240,7 @@ switch:
     id: auto_open
     icon: "mdi:door-open"
     optimistic: true
-    restore_state: true
+    restore_mode: ALWAYS_ON
     on_turn_on:
       - switch.turn_off: auto_open_once
       - switch.turn_off: auto_reject
@@ -254,7 +254,7 @@ switch:
     id: auto_open_once
     icon: "mdi:door-open"
     optimistic: true
-    restore_state: true
+    restore_mode: ALWAYS_ON
     on_turn_on:
       - switch.turn_off: auto_open
       - switch.turn_off: auto_reject
@@ -268,7 +268,7 @@ switch:
     id: auto_reject
     icon: "mdi:door-closed-lock"
     optimistic: true
-    restore_state: true
+    restore_mode: ALWAYS_ON
     on_turn_on:
       - switch.turn_off: auto_open
       - switch.turn_off: auto_open_once
